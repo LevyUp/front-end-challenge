@@ -1,0 +1,21 @@
+.talent {
+  /* HIDE RADIO */
+  [type="radio"],
+  span {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* IMAGE STYLES */
+  img {
+    cursor: pointer;
+  }
+
+  /* CHECKED STYLES */
+  [type="radio"]:checked + img {
+    outline: 2px solid #f00;
+  }
+}

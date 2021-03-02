@@ -1,0 +1,13 @@
+{
+  "paths": [
+    {
+      "name": "Talent Path 1",
+      "talents": ["stack", "utensils", "cake", "crown"]
+    },
+    {
+      "name": "Talent Path 2",
+      "talents": ["gas-mask", "scuba", "bolt", "skull"]
+    }
+  ],
+  "totalPoints": 6
+}

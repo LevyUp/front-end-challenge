@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Assumptions/Choices
 
-## Getting Started
+For ease of development I assumed I only had to support modern and up to date browsers.
 
-First, run the development server:
+I went with a framework like Next.js mainly because it's quite easy for me to setup. This way I could spend less time on configuration and more time developing.
+For a real world application I would need more context to determine if Next.js is something we would actually want to use.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+An application of this size probably doesn't need typescript. I went with typescript because it's easy enough to setup and I find that it improves
+the overall developer experience, at least for myself.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I assumed that talent paths would remain linear for the forseeable future. If I had reason think there was a reasonable chance of that changing I would probably approach
+the assignment differently.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+For the requirment that items must be selected in order I assumed that did not mean for the user to have to click each talent one at a time.
+As such if the user has enough points they could for instance click 'cake' without already having the previous talents. In this case the previous talents
+would also be 'invested' and the approriate number of points deducted.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+I made a similar assumption for removing points. For instance a user could have 3 points invested in the first tree and right click the first talent to remove
+all the points for that tree.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Additionally I also made it so that if a user left clicks a talent earlier in the tree it removes the talents ahead of it in the tree. I found
+that if I wanted to reset my talents to a specific point in the tree, it was easier to left click the exact node I wanted then right click the node ahead
+of it.
 
-## Learn More
+I used radio inputs for the talents to try and make the talent tree more accessible.
 
-To learn more about Next.js, take a look at the following resources:
+## Questions/Comments
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I don't consider myself a UI/UX expert, so if possible I would appreciate it if I could receive some insight about some of the requirements.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I thought it was odd to use right click to deallocate points. I don't think it would be obvious to a user to do that. I think simply clicking on a talent again
+to deallocate points would be more intuitive. I could be totally off the mark here. I would like to know the thinking behind this decision.
