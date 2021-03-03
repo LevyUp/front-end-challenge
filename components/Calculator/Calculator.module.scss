@@ -1,0 +1,56 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 427px;
+  background-image: url("/assets/talent-calc-bg.png");
+  background-size: 100% 100%;
+  border: 2px solid $tls-black-russian;
+  padding: 15px;
+
+  &_title {
+    width: 100%;
+    text-align: center;
+    padding: 4px;
+    background-color: rgba($color: $tls-charcoal, $alpha: 0.3);
+  }
+
+  &_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &_pathColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 3 1 auto;
+  }
+
+  &_path {
+    margin: 20px;
+    flex: 1 1 auto;
+  }
+
+  &_tracker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    min-height: 80px;
+    flex: 1;
+    text-align: center;
+    border: 2px solid $tls-black-russian;
+  }
+}

@@ -24,6 +24,9 @@ of it.
 
 I used radio inputs for the talents to try and make the talent tree more accessible.
 
+For mobile responsiveness I did not try to accommodate talent paths that could be longer than 4 at this time. If that were a likely scenario
+I would need to adjust the design.
+
 ## Questions/Comments
 
 I don't consider myself a UI/UX expert, so if possible I would appreciate it if I could receive some insight about some of the requirements.

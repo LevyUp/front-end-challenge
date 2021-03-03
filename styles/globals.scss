@@ -1,0 +1,20 @@
+@import "colors";
+@import "typings";
+
+html,
+body {
+  background-color: $tls-tangaroa;
+  color: $tls-zircon;
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

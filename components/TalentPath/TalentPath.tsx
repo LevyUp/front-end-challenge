@@ -1,10 +1,9 @@
 import Talent from "../Talent";
 import React from "react";
+import styles from "./TalentPath.module.scss";
 
-export type TalentPathProps = {
-  name: string;
+export type TalentPathProps = Path & {
   points: number;
-  talents: string[];
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onRightClick: (e: React.SyntheticEvent<HTMLElement>, value: number) => void;
 };
@@ -17,10 +16,10 @@ const TalentPath = ({
   onRightClick,
 }: TalentPathProps) => {
   return (
-    <div>
-      <span>{name}-0</span>
-      <label>
-        <span>{name}</span>
+    <div className={styles.path}>
+      <span className={styles.path_name}>{name}</span>
+      <label className={styles.path_emptyTalent}>
+        <span>{name}-0</span>
         <input
           type="radio"
           id={`${name}-0`}
@@ -29,20 +28,25 @@ const TalentPath = ({
           onChange={onChange}
         />
       </label>
-      {talents.map((talent, index) => {
-        return (
-          <Talent
-            key={`${name}-${talent}`}
-            name={talent}
-            pathName={name}
-            isPurchased={index < points}
-            value={index + 1}
-            checked={index === points - 1}
-            onChange={onChange}
-            onRightClick={onRightClick}
-          />
-        );
-      })}
+      <div className={styles.path_row}>
+        {talents.map((talent, index) => {
+          const isPurchased = index < points;
+          return (
+            <React.Fragment key={`${name}-${talent}`}>
+              {index > 0 && <span className={styles.path_divider}></span>}
+              <Talent
+                name={talent}
+                pathName={name}
+                isPurchased={isPurchased}
+                value={index + 1}
+                checked={index === points - 1}
+                onChange={onChange}
+                onRightClick={onRightClick}
+              />
+            </React.Fragment>
+          );
+        })}
+      </div>
     </div>
   );
 };
