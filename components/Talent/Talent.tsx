@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Talent.module.scss";
 
 export type TalentProps = {
-  isPurchased: boolean;
+  isSelected: boolean;
   checked: boolean;
   name: string;
   pathName: string;
@@ -12,7 +12,7 @@ export type TalentProps = {
 };
 
 const Talent = ({
-  isPurchased,
+  isSelected,
   name,
   pathName,
   value,
@@ -21,7 +21,7 @@ const Talent = ({
   onRightClick,
 }: TalentProps) => {
   const [hover, setHover] = useState(false);
-  const imgType = isPurchased || hover ? "active" : "muted";
+  const imgType = isSelected || hover ? "active" : "muted";
   const src = `/icons/${name}-${imgType}.png`;
 
   return (
@@ -43,7 +43,7 @@ const Talent = ({
       />
       <img
         className={`${styles.talent_icon} ${
-          isPurchased ? styles.talent___isPurchased : ""
+          isSelected ? styles.talent___isSelected : ""
         }`}
         src={src}
         alt={name}

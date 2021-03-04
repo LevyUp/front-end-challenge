@@ -1,3 +1,11 @@
+## Getting Started
+
+```
+npm install
+
+npm run dev
+```
+
 ## Assumptions/Choices
 
 For ease of development I assumed I only had to support modern and up to date browsers.
@@ -5,8 +13,7 @@ For ease of development I assumed I only had to support modern and up to date br
 I went with a framework like Next.js mainly because it's quite easy for me to setup. This way I could spend less time on configuration and more time developing.
 For a real world application I would need more context to determine if Next.js is something we would actually want to use.
 
-An application of this size probably doesn't need typescript. I went with typescript because it's easy enough to setup and I find that it improves
-the overall developer experience, at least for myself.
+An application of this size probably doesn't need typescript. I went with typescript because for me its type system helps to avoid common pitfalls in vanilla javascript.
 
 I assumed that talent paths would remain linear for the forseeable future. If I had reason think there was a reasonable chance of that changing I would probably approach
 the assignment differently.

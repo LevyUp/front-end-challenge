@@ -37,7 +37,7 @@ const TalentPath = ({
               <Talent
                 name={talent}
                 pathName={name}
-                isPurchased={isPurchased}
+                isSelected={isPurchased}
                 value={index + 1}
                 checked={index === points - 1}
                 onChange={onChange}

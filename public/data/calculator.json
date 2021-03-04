@@ -1,10 +1,12 @@
 {
   "paths": [
     {
+      "id": "1",
       "name": "Talent Path 1",
       "talents": ["stack", "utensils", "cake", "crown"]
     },
     {
+      "id": "2",
       "name": "Talent Path 2",
       "talents": ["gas-mask", "scuba", "bolt", "skull"]
     }

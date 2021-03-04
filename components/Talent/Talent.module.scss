@@ -24,7 +24,7 @@
     transition: border-image 0.1s linear, box-shadow 0.2s linear;
   }
 
-  &_icon.talent___isPurchased {
+  &_icon.talent___isSelected {
     border: 4px solid;
     border-image: linear-gradient(
         to top,

@@ -1,26 +1,31 @@
 import TalentPath from "../TalentPath";
 import React, { useState } from "react";
 import styles from "./Calculator.module.scss";
+import { Calculator as CalculatorModel, Loadout } from "../../types/calculator";
 
-export type CalculatorProps = Loadout;
+export type CalculatorProps = CalculatorModel & Loadout;
 
-const Calculator = ({ paths, totalPoints }: CalculatorProps) => {
-  const [pointAllocation, setPointAllocation] = useState(
-    new Array(paths.length).fill(0)
+const Calculator = ({ distribution, paths, totalPoints }: CalculatorProps) => {
+  const initialDistribution = distribution
+    ? paths.map((path) => distribution[path.id])
+    : Array(paths.length).fill(0);
+
+  const [pointDistribution, setPointDistribution] = useState(
+    initialDistribution
   );
-  const spent = pointAllocation.reduce((a, b) => a + b, 0);
+  const spent = pointDistribution.reduce((a, b) => a + b, 0);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>, path: number) => {
     const value = parseInt(e.target.value);
-    const cost = value - pointAllocation[path];
+    const cost = value - pointDistribution[path];
     const remaining = totalPoints - spent;
 
     if (cost > remaining) {
       e.preventDefault();
     } else {
-      const reallocatedPoints = [...pointAllocation];
+      const reallocatedPoints = [...pointDistribution];
       reallocatedPoints[path] = value;
-      setPointAllocation(reallocatedPoints);
+      setPointDistribution(reallocatedPoints);
     }
   };
 
@@ -30,19 +35,19 @@ const Calculator = ({ paths, totalPoints }: CalculatorProps) => {
     path: number
   ) => {
     e.preventDefault();
-    const repayment = pointAllocation[path] - value + 1;
+    const repayment = pointDistribution[path] - value + 1;
     if (repayment > 0) {
-      const reallocatedPoints = [...pointAllocation];
+      const reallocatedPoints = [...pointDistribution];
       reallocatedPoints[path] = value - 1;
-      setPointAllocation(reallocatedPoints);
+      setPointDistribution(reallocatedPoints);
     }
   };
 
   return (
     <div className={styles.calculator}>
-      <h2 className={styles.calculator_title}>
+      <h1 className={styles.calculator_title}>
         TitanStar Legends - Rune Mastery Loadout Talent Calculator 9000
-      </h2>
+      </h1>
       <div className={styles.calculator_container}>
         <div className={styles.calculator_pathColumn}>
           {paths.map((path, index) => {
@@ -50,7 +55,7 @@ const Calculator = ({ paths, totalPoints }: CalculatorProps) => {
               <div key={path.name} className={styles.calculator_path}>
                 <TalentPath
                   name={path.name}
-                  points={pointAllocation[index]}
+                  points={pointDistribution[index]}
                   talents={path.talents}
                   onChange={(e) => onChange(e, index)}
                   onRightClick={(e, v) => onRightClick(e, v, index)}
@@ -59,13 +64,11 @@ const Calculator = ({ paths, totalPoints }: CalculatorProps) => {
             );
           })}
         </div>
-        <div
-          className={`${styles.calculator_tracker} ${styles.calculator_trackerDesktop}`}
-        >
+        <div className={styles.calculator_tracker}>
           <span>
-            {spent}/{totalPoints}
+            {spent} / {totalPoints}
           </span>
-          <span>Points Spent</span>
+          <span className={styles.calculator_trackerText}>Points Spent</span>
         </div>
       </div>
     </div>
