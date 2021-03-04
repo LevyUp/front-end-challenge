@@ -1,4 +1,4 @@
-import TalentPath from "../TalentPath";
+import TalentPath from "./TalentPath";
 import React, { useState } from "react";
 import styles from "./Calculator.module.scss";
 import { Calculator as CalculatorModel, Loadout } from "../../types/calculator";

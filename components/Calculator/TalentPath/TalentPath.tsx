@@ -1,7 +1,7 @@
 import Talent from "../Talent";
 import React from "react";
 import styles from "./TalentPath.module.scss";
-import { Path } from "../../types/calculator";
+import { Path } from "../../../types/calculator";
 
 export type TalentPathProps = Path & {
   points: number;
