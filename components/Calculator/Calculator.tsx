@@ -54,6 +54,7 @@ const Calculator = ({ distribution, paths, totalPoints }: CalculatorProps) => {
             return (
               <div key={path.name} className={styles.calculator_path}>
                 <TalentPath
+                  id={path.id}
                   name={path.name}
                   points={pointDistribution[index]}
                   talents={path.talents}
