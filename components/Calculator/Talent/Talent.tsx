@@ -22,16 +22,18 @@ const Talent = ({
   onChange,
   onRightClick,
 }: TalentProps) => {
-  const [hover, setHover] = useState(false);
-  const imgType = isSelected || hover ? "active" : "muted";
+  const [highlight, setHighlight] = useState(false);
+  const imgType = isSelected || highlight ? "active" : "muted";
   const src = `/icons/${icon}-${imgType}.png`;
 
   return (
     <label
       className={styles.talent}
       onContextMenu={(e) => onRightClick(e, value)}
-      onMouseOver={(_) => setHover(true)}
-      onMouseOut={(_) => setHover(false)}
+      onFocus={(_) => setHighlight(true)}
+      onMouseOver={(_) => setHighlight(true)}
+      onMouseOut={(_) => setHighlight(false)}
+      onBlur={(_) => setHighlight(false)}
     >
       <span className={styles.name}>{name}</span>
       <input
