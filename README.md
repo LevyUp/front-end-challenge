@@ -37,7 +37,7 @@ as Atomic CSS, BEM, SMACSS, etc.
 
 I assumed that talent paths would remain linear for the forseeable future.
 
-For the requirment that items must be selected in order I assumed that did not mean for the user to have to click each talent one at a time.
+For the requirement that items must be selected in order I assumed that did not mean for the user to have to click each talent one at a time.
 As such if the user has enough points they could for instance click 'cake' without already having the previous talents. In this case the previous talents
 would also be 'invested' and the approriate number of points deducted.
 
