@@ -35,7 +35,7 @@ const TalentPath = ({
         {talents.map((talent, index) => {
           const isPurchased = index < points;
           return (
-            <React.Fragment key={`${name}-${talent}`}>
+            <React.Fragment key={`${talent.id}`}>
               {index > 0 && <span className={styles.divider}></span>}
               <Talent
                 {...talent}

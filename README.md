@@ -33,6 +33,10 @@ and makes debugging easier.
 I used css modules to scope css to components. I found this to be sufficient for this application and did not feel the need to opt into a specific methodology such
 as Atomic CSS, BEM, SMACSS, etc.
 
+For unit testing I went with jest and react-testing-library. Jest is very fast and all around just a nice framework. I like react testing library
+because it makes it really easy to write good unit tests that don't need to know about the implementation details of my components. Also it's easier
+to write unit tests that more closely resemble how a user actually interfaces with your components.
+
 ### Functionality
 
 I assumed that talent paths would remain linear for the forseeable future.
