@@ -6,59 +6,59 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 427px;
+  border: 2px solid $tls-black-russian;
   background-image: url("/assets/talent-calc-bg.png");
   background-size: 100% 100%;
-  border: 2px solid $tls-black-russian;
+  min-height: 427px;
   padding: 15px;
+}
 
-  &_title {
-    width: 100%;
-    text-align: center;
-    padding: 4px;
-    background-color: rgba($color: $tls-charcoal, $alpha: 0.3);
+.title {
+  background-color: rgba($color: $tls-charcoal, $alpha: 0.3);
+  width: 100%;
+  padding: 4px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+
+  @include breakpoint(sm) {
+    flex-direction: row;
+    align-items: center;
   }
+}
 
-  &_container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
+.pathColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2 1 auto;
+}
 
-    @include breakpoint(sm) {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
+.path {
+  margin: 20px 20px 20px 0px;
+  flex: 1 1 auto;
+}
 
-  &_pathColumn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 2 1 auto;
-  }
+.tracker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid $tls-black-russian;
+  margin: 20px;
+  background: rgba($color: $tls-black-pearl, $alpha: 0.6);
+  min-height: 80px;
 
-  &_path {
-    margin: 20px 20px 20px 0px;
-    flex: 1 1 auto;
-  }
+  font-size: $font-size-lg;
+  flex: 1;
+  text-align: center;
+}
 
-  &_tracker {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: rgba($color: $tls-black-pearl, $alpha: 0.6);
-    margin: 20px;
-    min-height: 80px;
-    flex: 1;
-    text-align: center;
-    border: 2px solid $tls-black-russian;
-
-    font-size: $font-size-lg;
-  }
-
-  &_trackerText {
-    color: $tls-cello;
-  }
+.trackerText {
+  color: $tls-cello;
 }

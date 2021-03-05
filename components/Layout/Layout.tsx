@@ -14,7 +14,7 @@ const Layout = ({ children, title }: LayoutProps) => {
         <title>{title}</title>
       </Head>
 
-      <main className={styles.layout_main}>{children}</main>
+      <main className={styles.main}>{children}</main>
     </div>
   );
 };

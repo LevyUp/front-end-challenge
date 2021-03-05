@@ -2,29 +2,29 @@
 
 .talent {
   cursor: pointer;
+}
 
-  /* hide radio and label */
-  &_name,
-  &_input {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+/* hide radio and label */
+.name,
+.field{
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
 
-  &_icon {
-    border: 4px solid;
-    border-image: linear-gradient(
-        to top,
-        $tls-matterhorn,
-        $tls-nero 50%,
-        $tls-matterhorn 50%
-      )
-      1;
-    transition: border-image 0.1s linear, box-shadow 0.2s linear;
-  }
+.icon {
+  border: 4px solid;
+  transition: border-image 0.1s linear, box-shadow 0.2s linear;
+  border-image: linear-gradient(
+      to top,
+      $tls-matterhorn,
+      $tls-nero 50%,
+      $tls-matterhorn 50%
+    )
+    1;
 
-  &_icon.talent___isSelected {
+  &.isSelected {
     border: 4px solid;
     border-image: linear-gradient(
         to top,

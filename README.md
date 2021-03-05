@@ -12,12 +12,20 @@ I would very much appreciate any feedback provided.
 
 ## Assumptions/Choices
 
+### Technology
+
 For ease of development I assumed I only had to support modern and up to date browsers.
 
 I went with a framework like Next.js mainly because it's quite easy for me to setup. This way I could spend less time on configuration and more time developing.
 For a real world application I would need more context to determine if Next.js is something we would actually want to use.
 
-An application of this size probably doesn't need typescript. I went with typescript because for me the type system helps to avoid common pitfalls in vanilla javascript.
+An application of this size probably doesn't need typescript. I went with typescript because for me the type system helps to avoid common pitfalls in vanilla javascript
+and makes debugging easier.
+
+I used css modules to scope css to components. I found this to be sufficient for this application and did not feel the need to opt into a specific methodology such
+as Atomic CSS, BEM, SMACSS, etc.
+
+### Functionality
 
 I assumed that talent paths would remain linear for the forseeable future. If I had reason to think there was a reasonable chance of that changing I would probably approach
 the assignment differently.

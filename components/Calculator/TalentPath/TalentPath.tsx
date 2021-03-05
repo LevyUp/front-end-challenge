@@ -18,8 +18,8 @@ const TalentPath = ({
 }: TalentPathProps) => {
   return (
     <div className={styles.path}>
-      <span className={styles.path_name}>{name}</span>
-      <label className={styles.path_emptyTalent}>
+      <span className={styles.name}>{name}</span>
+      <label className={styles.emptyTalent}>
         <span>{name}-0</span>
         <input
           type="radio"
@@ -29,12 +29,12 @@ const TalentPath = ({
           onChange={onChange}
         />
       </label>
-      <div className={styles.path_row}>
+      <div className={styles.talents}>
         {talents.map((talent, index) => {
           const isPurchased = index < points;
           return (
             <React.Fragment key={`${name}-${talent}`}>
-              {index > 0 && <span className={styles.path_divider}></span>}
+              {index > 0 && <span className={styles.divider}></span>}
               <Talent
                 name={talent}
                 pathName={name}

@@ -7,35 +7,35 @@
   flex-direction: column;
   text-align: center;
 
-  &_emptyTalent {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  &_name {
-    margin: 0 0 20px 0;
-    text-transform: uppercase;
-
-    @include breakpoint(sm) {
-      margin: 0 20px 0 0;
-    }
-  }
-
-  &_row {
-    display: flex;
-    flex: 1;
-  }
-
-  &_divider {
-    flex: 1;
-    border-bottom: 16px solid rgba($color: $tls-charcoal, $alpha: 0.3);
-    margin: 20px 0;
-  }
-
   @include breakpoint(sm) {
     flex-direction: row;
     align-items: center;
   }
+}
+
+.name {
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+
+  @include breakpoint(sm) {
+    margin: 0 20px 0 0;
+  }
+}
+
+.emptyTalent {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.talents {
+  display: flex;
+  flex: 1;
+}
+
+.divider {
+  border-bottom: 16px solid rgba($color: $tls-charcoal, $alpha: 0.3);
+  margin: 20px 0;
+  flex: 1;
 }

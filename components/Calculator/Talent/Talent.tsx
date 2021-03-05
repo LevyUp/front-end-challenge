@@ -31,9 +31,9 @@ const Talent = ({
       onMouseOver={(_) => setHover(true)}
       onMouseOut={(_) => setHover(false)}
     >
-      <span className={styles.talent_name}>{name}</span>
+      <span className={styles.name}>{name}</span>
       <input
-        className={styles.talent_input}
+        className={styles.field}
         type="radio"
         id={`${pathName}-${name}`}
         name={pathName}
@@ -42,9 +42,7 @@ const Talent = ({
         onChange={onChange}
       />
       <img
-        className={`${styles.talent_icon} ${
-          isSelected ? styles.talent___isSelected : ""
-        }`}
+        className={`${styles.icon} ${isSelected ? styles.isSelected : ""}`}
         src={src}
         alt={name}
       />

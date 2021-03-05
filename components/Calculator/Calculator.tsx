@@ -45,14 +45,14 @@ const Calculator = ({ distribution, paths, totalPoints }: CalculatorProps) => {
 
   return (
     <div className={styles.calculator}>
-      <h1 className={styles.calculator_title}>
+      <h1 className={styles.title}>
         TitanStar Legends - Rune Mastery Loadout Talent Calculator 9000
       </h1>
-      <div className={styles.calculator_container}>
-        <div className={styles.calculator_pathColumn}>
+      <div className={styles.container}>
+        <div className={styles.pathColumn}>
           {paths.map((path, index) => {
             return (
-              <div key={path.name} className={styles.calculator_path}>
+              <div key={path.name} className={styles.path}>
                 <TalentPath
                   id={path.id}
                   name={path.name}
@@ -65,11 +65,11 @@ const Calculator = ({ distribution, paths, totalPoints }: CalculatorProps) => {
             );
           })}
         </div>
-        <div className={styles.calculator_tracker}>
+        <div className={styles.tracker}>
           <span>
             {spent} / {totalPoints}
           </span>
-          <span className={styles.calculator_trackerText}>Points Spent</span>
+          <span className={styles.trackerText}>Points Spent</span>
         </div>
       </div>
     </div>
