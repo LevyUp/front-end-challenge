@@ -66,9 +66,3 @@ a loadout page is /loadouts/{id}. There are two example loadouts in the data dir
 For now I did not include any error handling or cases where a loadout may not be compatible with the current version of the calculator.
 
 I did not include the ability to save a loadout.
-
-## Comments
-
-I think it would nice to have a name for each talent displayed somewhere in the design.
-
-I think the mobile view I laid for very small sizes has room for improvement.
