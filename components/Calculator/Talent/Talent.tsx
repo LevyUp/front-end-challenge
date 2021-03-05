@@ -33,9 +33,9 @@ const Talent = ({
     >
       <span className={styles.name}>{name}</span>
       <input
+        data-testid="talent-input"
         className={styles.field}
         type="radio"
-        id={`${pathName}-${name}`}
         name={pathName}
         value={value}
         checked={checked}

@@ -33,16 +33,11 @@
   }
 }
 
-.pathColumn {
+.paths {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 2 1 auto;
-}
-
-.path {
-  margin: 20px 20px 20px 0px;
-  flex: 1 1 auto;
 }
 
 .tracker {
@@ -52,13 +47,28 @@
   border: 2px solid $tls-black-russian;
   margin: 20px;
   background: rgba($color: $tls-black-pearl, $alpha: 0.6);
-  min-height: 80px;
+  min-height: 90px;
+  width: 160px;
 
   font-size: $font-size-lg;
-  flex: 1;
+  align-self: center;
   text-align: center;
+
+  @include breakpoint(sm) {
+    margin-left: 30px;
+  }
 }
 
 .trackerText {
   color: $tls-cello;
+}
+
+.hasError {
+  animation:flash 1.3s ease-in-out;
+  
+  @keyframes flash{
+    0%{ }
+    50%{ color: $tls-red; border-color: $tls-red;}
+    100%{ }
+  }
 }

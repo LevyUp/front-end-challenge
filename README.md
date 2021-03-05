@@ -1,5 +1,7 @@
 ## Getting Started
 
+### Setup
+
 ```
 npm install
 
@@ -7,6 +9,12 @@ npm run dev
 ```
 
 The app will run at localhost:3000
+
+### Testing
+
+```
+npm test
+```
 
 I would very much appreciate any feedback provided.
 
@@ -27,8 +35,7 @@ as Atomic CSS, BEM, SMACSS, etc.
 
 ### Functionality
 
-I assumed that talent paths would remain linear for the forseeable future. If I had reason to think there was a reasonable chance of that changing I would probably approach
-the assignment differently.
+I assumed that talent paths would remain linear for the forseeable future.
 
 For the requirment that items must be selected in order I assumed that did not mean for the user to have to click each talent one at a time.
 As such if the user has enough points they could for instance click 'cake' without already having the previous talents. In this case the previous talents
@@ -41,6 +48,9 @@ Additionally I also made it so that if a user left clicks a talent earlier in th
 that if I wanted to reset my talents to a specific point in the path, it was easier to left click the exact node I wanted than right click the node ahead
 of it.
 
+I didn't think there was a good indicator when a user tries to spend more points than they have left so I added a simple animation to highlight
+the points area when this happens.
+
 I used radio inputs for the talents to try and make the calculator more accessible.
 
 For mobile responsiveness I did not try to accommodate talent paths that could be longer than 4 at this time. If that were a likely scenario
@@ -50,6 +60,8 @@ I made it so the calculator could be initialized with talents already selected. 
 For now it pulls mock data from json files located in "public/data". In a real app I would replace the file system functions with http calls. The route for
 a loadout page is /loadouts/{id}. There are two example loadouts in the data directory.
 For now I did not include any error handling or cases where a loadout may not be compatible with the current version of the calculator.
+
+I did not include the ability to save a loadout.
 
 ## Comments
 

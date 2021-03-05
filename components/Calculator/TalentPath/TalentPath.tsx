@@ -17,8 +17,10 @@ const TalentPath = ({
   onRightClick,
 }: TalentPathProps) => {
   return (
-    <div className={styles.path}>
-      <span className={styles.name}>{name}</span>
+    <div className={styles.path} data-testid="talent-path">
+      <span className={styles.name} data-testid="path-name">
+        {name}
+      </span>
       <label className={styles.emptyTalent}>
         <span>{name}-0</span>
         <input
