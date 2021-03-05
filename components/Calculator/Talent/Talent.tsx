@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./Talent.module.scss";
+import { Talent as TalentModel } from "../../../types/calculator";
 
-export type TalentProps = {
+export type TalentProps = TalentModel & {
   isSelected: boolean;
   checked: boolean;
-  name: string;
   pathName: string;
   value: number;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -12,6 +12,8 @@ export type TalentProps = {
 };
 
 const Talent = ({
+  icon,
+  id,
   isSelected,
   name,
   pathName,
@@ -22,7 +24,7 @@ const Talent = ({
 }: TalentProps) => {
   const [hover, setHover] = useState(false);
   const imgType = isSelected || hover ? "active" : "muted";
-  const src = `/icons/${name}-${imgType}.png`;
+  const src = `/icons/${icon}-${imgType}.png`;
 
   return (
     <label
@@ -37,6 +39,7 @@ const Talent = ({
         className={styles.field}
         type="radio"
         name={pathName}
+        id={`talent-${id}`}
         value={value}
         checked={checked}
         onChange={onChange}

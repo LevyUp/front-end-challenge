@@ -38,7 +38,7 @@ const TalentPath = ({
             <React.Fragment key={`${name}-${talent}`}>
               {index > 0 && <span className={styles.divider}></span>}
               <Talent
-                name={talent}
+                {...talent}
                 pathName={name}
                 isSelected={isPurchased}
                 value={index + 1}

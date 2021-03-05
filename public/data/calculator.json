@@ -3,12 +3,22 @@
     {
       "id": "1",
       "name": "Talent Path 1",
-      "talents": ["stack", "utensils", "cake", "crown"]
+      "talents": [
+        { "id": "stack", "name": "stack", "icon": "stack" },
+        { "id": "utensils", "name": "utensils", "icon": "utensils" },
+        { "id": "cake", "name": "cake", "icon": "cake" },
+        { "id": "crown", "name": "crown", "icon": "crown" }
+      ]
     },
     {
       "id": "2",
       "name": "Talent Path 2",
-      "talents": ["gas-mask", "scuba", "bolt", "skull"]
+      "talents": [
+        { "id": "gas-mask", "name": "gas-mask", "icon": "gas-mask" },
+        { "id": "scuba", "name": "scuba", "icon": "scuba" },
+        { "id": "bolt", "name": "bolt", "icon": "bolt" },
+        { "id": "skull", "name": "skull", "icon": "skull" }
+      ]
     }
   ],
   "totalPoints": 6

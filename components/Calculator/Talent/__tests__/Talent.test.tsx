@@ -9,6 +9,8 @@ describe("Talent", () => {
     render(
       <Talent
         name="name"
+        id="id"
+        icon="name"
         isSelected={false}
         pathName="path"
         checked={false}
@@ -28,6 +30,8 @@ describe("Talent", () => {
     render(
       <Talent
         name="name"
+        id="id"
+        icon="name"
         isSelected={true}
         pathName="path"
         checked={false}

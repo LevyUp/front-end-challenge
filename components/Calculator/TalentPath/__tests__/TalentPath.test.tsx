@@ -28,7 +28,10 @@ describe("TalentPath", () => {
         id="id"
         name="name"
         points={0}
-        talents={["talent-0", "talent-1"]}
+        talents={[
+          { id: "t-0", icon: "talent-0", name: "talent-0" },
+          { id: "t-1", icon: "talent-1", name: "talent-1" },
+        ]}
         onChange={() => {}}
         onRightClick={() => {}}
       />
@@ -47,7 +50,10 @@ describe("TalentPath", () => {
         id="id"
         name="name"
         points={2}
-        talents={["talent-0", "talent-1"]}
+        talents={[
+          { id: "t-0", icon: "talent-0", name: "talent-0" },
+          { id: "t-1", icon: "talent-1", name: "talent-1" },
+        ]}
         onChange={() => {}}
         onRightClick={() => {}}
       />

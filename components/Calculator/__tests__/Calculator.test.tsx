@@ -32,7 +32,13 @@ describe("Calculator", () => {
   it("spends a talent point", async () => {
     render(
       <Calculator
-        paths={[{ id: "1", name: "1", talents: ["talent"] }]}
+        paths={[
+          {
+            id: "1",
+            name: "1",
+            talents: [{ id: "t-1", icon: "talent", name: "talent" }],
+          },
+        ]}
         totalPoints={1}
       />
     );
@@ -47,7 +53,13 @@ describe("Calculator", () => {
   it("doesn't spend a talent point", async () => {
     render(
       <Calculator
-        paths={[{ id: "1", name: "1", talents: ["talent"] }]}
+        paths={[
+          {
+            id: "1",
+            name: "1",
+            talents: [{ id: "t-1", icon: "talent", name: "talent" }],
+          },
+        ]}
         totalPoints={1}
       />
     );
